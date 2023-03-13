@@ -1,0 +1,135 @@
+.login {
+  background-image: url('../../img/login/bg-login.png');
+  background-size: cover;
+  background-position: top;
+  min-height: 95vh;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  padding-top: rem(60);
+  &__wrapper {
+    max-width: 29.0625rem;
+  }
+  &__inner {
+    min-width: rem(465);
+    width: 100%;
+    background-color: rgba(var(--dark-clr), 1);
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+  &__signin {
+    border-radius: 10px;
+    @include df(row, center, 5px);
+  }
+  &__input-block {
+    position: relative;
+  }
+  &__reveal-password {
+    position: absolute;
+    right: 10px;
+    right: 0;
+    z-index: 10;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    cursor: pointer;
+    transition: 200ms ease;
+    svg {
+      stroke: rgba(var(--fm-t-clr), 1);
+      fill: transparent;
+      transition: inherit;
+    }
+    &:hover {
+      svg {
+        stroke: rgba(var(--g-clr), .4);
+      }
+    }
+  }
+  &__btn-icon {
+    position: relative;
+    z-index: 5;
+  }
+  &__title {
+    margin-bottom: rem(35);
+    font-size: rem(25);
+    font-weight: 700;
+    line-height: 120%;
+  }
+  &__inputs {
+    @include df(column, unset, 0.9375rem);
+    margin-bottom: rem(20);
+  }
+  &__input-block {
+    flex: 1;
+  }
+  &__input-heading {
+    font-size: 14px;
+    margin-bottom: rem(5);
+  }
+  &__actions {
+    @include df(row, center, 1rem);
+    justify-content: space-between;
+  }
+  &__remember {
+    @include df(row, center, 5px);
+    input[type=checkbox] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      @include w-h(1.25rem, 1.25rem);
+      border: 1px solid rgba(var(--fm-border-clr), 1);
+      background-color: rgba(var(--checkbox-clr), 1);
+      border-radius: 2px;
+      position: relative;
+      transition: 150ms ease;
+      cursor: pointer;
+      &::before {
+        @include pseudo;
+        @include w-h(10px, 6.5px);
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+        opacity: 0;
+        background-image: url('../../img/sprite/check-icon.svg');
+        background-position: center;
+        background-size: 100% 100%;
+        transition: 150ms ease;
+        transform: translate(-50%, -50%) scale(0);
+      }
+      &:checked {
+        border: 1px solid transparent;
+        background-color: rgba(var(--g-clr), 1);
+        &::before {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+  &__remember-label {
+    font-size: rem(14);
+    white-space: nowrap;
+  }
+}
+
+.show-password {
+  &:hover {
+    svg {
+      stroke: rgba(var(--g-clr), 1);
+    }
+  }
+  svg {
+    stroke: rgba(var(--g-clr), 1);
+  }
+}
+
+@include max-width($m-q) {
+  .login {
+    &__title {
+      margin-bottom: rem(20);
+    }
+    &__inner {
+      min-width: rem(340);
+    }
+  }
+}

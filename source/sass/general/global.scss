@@ -15,6 +15,7 @@ body {
   background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat;
+  scroll-behavior: inherit;
   &::before {
     @include pseudo;
     top: 0;
@@ -57,6 +58,7 @@ html {
   line-height: normal;
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  scroll-behavior: smooth;
 }
 
 @include max-width(78.125em) {

@@ -14,7 +14,7 @@
     display: none;
     span {
       display: block;
-      @include w-h(1.35rem, 1.35rem);
+      @include w-h(1.75rem, 1.75rem);
       background-color: rgba(var(--w-clr), 1);
       height: 0.125rem;
       border-radius: 2px;
@@ -30,7 +30,7 @@
 @include max-width(48em) {
   .header {
     &__burger {
-      @include df(column, center, rem(5));
+      @include df(column, center, rem(7));
     }
     &__logo {max-width: rem(100);}
   }

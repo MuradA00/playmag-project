@@ -6,7 +6,7 @@
   min-width: rem(275);
   z-index: 2000;
   background-color: rgba(var(--dark-clr), 1);
-  border-left: 1px solid rgba(var(--g-clr), 1);
+  border-left: 1px solid rgba(var(--g-clr), .5);
   transition: 300ms ease 300ms;
   transform: translateX(100%);
   visibility: hidden;
@@ -16,8 +16,6 @@
     top: rem(20);
     width: 2rem;
     height: 2rem;
-    transition: all 400ms ease;
-    transition-delay: 400ms;
     &::before, &::after {
       position: absolute;
       left: 15px;
