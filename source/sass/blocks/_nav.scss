@@ -1,0 +1,19 @@
+.nav {
+  &__list {
+    @include df(row, center, 1.875rem);
+  }
+  &__link {
+    @extend .t-16-r;
+    transition: 300ms ease;
+    &:hover {
+      color: rgba(var(--g-clr), 1);
+    }
+  }
+}
+
+@include max-width(48em) {
+  .nav {
+    display: none;
+  }
+}
+

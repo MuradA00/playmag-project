@@ -1,0 +1,102 @@
+.features {
+  margin-bottom: rem(80);
+  &__body {
+    position: relative;
+    z-index: 50;
+    padding: rem(50) 0 0;
+  }
+  &__heading {
+    position: relative;
+  }
+  &__title {
+    flex: 1;
+    margin-bottom: rem(30);
+  }
+  &__navigation {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    @include df(row, center, 1.25rem);
+  }
+  &__arrow {
+    @include w-h(3.125rem, 3.125rem);
+    display: grid;
+    place-items: center;
+    background-color: rgba(var(--dark-clr), 1);
+    border-radius: 10px;
+    transition: 200ms ease;
+    &:hover {
+      background-color: rgba(var(--g-clr), 1);
+    }
+  }
+}
+
+.features-slider {
+  &__slide {
+    background-color: rgba(var(--dark-clr), 1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: rem(20);
+    min-height: rem(300);
+    position: relative;
+    &::before {
+      @include pseudo;
+      @include center;
+      @include w-h(15.625rem, 15.625rem);
+      z-index: -1;
+      background-position: center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    &_offer {
+      &::before {
+        background-image: url('../../img/features/offer-icon.svg');
+      }
+    }
+    &_price {
+      &::before {
+        background-image: url('../../img/features/pricing-payments.svg');
+      }
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: clamp(18px, 1.25vw, 20px);
+    margin-bottom: rem(10);
+  }
+  &__info {
+    flex: 1;
+    display: grid;
+    grid-gap: 1.125rem;
+    p {
+      font-size: rem(15);
+      font-weight: 400;
+      color: rgba(var(--w-clr), 1);
+    }
+  }
+}
+
+@include max-width(48em) {
+  .features {
+    &__heading {
+      @include df(column, center, 1.875rem);
+      margin-bottom: 1.875rem;
+    }
+    &__title {
+      margin-bottom: 0;
+    }
+    &__navigation {
+      position: initial;
+      transform: translate(0);
+    }
+  }
+  .features-slider {
+    &__slide {
+      height: 100%;
+      padding: rem(15);
+      min-height: rem(400);
+    }
+  }
+}

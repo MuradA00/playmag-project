@@ -1,0 +1,18 @@
+.social {
+  @include df(column, start, 1rem);
+  &__link {
+    @include df(row, center, 0.625rem);
+    span {
+      @extend .t-16-r;
+    }
+    img, svg {
+      @include w-h(1.5625rem, 1.5625rem);
+    }
+  }
+}
+
+@include max-width($m-q) {
+  .social {
+    align-items: center;
+  }
+}

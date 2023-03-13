@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+
+<body style="background-image: url('../../img/bg-body.png');">
+  @@include('_header.html',{})
+
+  <main>
+    @@include('_menu.html',{})
+    <div class="circle circle_l circle_top"></div>
+    <div class="circle circle_l circle_top"></div>
+    <div class="circle circle_map"></div>
+    @@include('_home.html', {})
+    @@include('_about.html',{})
+    @@include('_features.html',{})
+    @@include('_logos.html',{})
+    @@include('_map.html',{})
+    @@include('_form.html',{})
+  </main>
+
+
+  @@include('_footer.html',{})
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/burger.js"></script>
+</body>
+
+</html>

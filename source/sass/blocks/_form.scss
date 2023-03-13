@@ -1,0 +1,83 @@
+.contact {
+  overflow: hidden;
+  margin-bottom: clamp(60px, 5vw, 70px);
+  padding-bottom: 35px;
+  &__title {
+    margin-bottom: clamp(20px, 5.3125rem, 85px);
+  }
+}
+
+.form {
+  max-width: rem(500);
+  margin: 0 auto;
+  position: relative;
+  &::before {
+    @include pseudo;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(600px, 40.625vw, 650px);
+    height: clamp(670px, 44.375vw, 710px);
+    background-image: url('../../img/form/form-circle.png');
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+  &__wrapper {
+    @include df(column, center, 1.25rem);
+  }
+  &__inner {
+    width: 100%;
+    @include df(column, start, 1.25rem);
+  }
+  &__input-block {
+    flex: 1;
+    width: 100%;
+    input {
+      border: 1px solid rgba(var(--fm-border-clr), 1);
+      background-color: rgba(var(--form-clr), 1);
+      padding: rem(15) rem(10);
+      border-radius: 10px;
+      @extend .t-16-r;
+      transition: 300ms ease;
+      &:focus {
+        border: 1px solid rgba(var(--g-clr), 1);
+      }
+      color: rgba(var(--w-clr), 1);
+      &::placeholder {
+        color: rgba(var(--fm-t-clr), 1);
+        font-size: inherit;
+      }
+    }
+  }
+  &__message {
+    width: 100%;
+    textarea {
+      border: 1px solid rgba(var(--fm-border-clr), 1);
+      background-color: rgba(var(--form-clr), 1);
+      padding: rem(15) rem(10);
+      border-radius: 10px;
+      resize: none;
+      min-height: 11.25rem;
+      width: inherit;
+      @extend .t-16-r;
+      color: rgba(var(--w-clr), 1);
+      transition: 300ms ease;
+      &:focus {
+        border: 1px solid rgba(var(--g-clr), 1);
+      }
+      &::placeholder {
+        color: rgba(var(--fm-t-clr), 1);
+        font-size: inherit;
+      }
+      outline: none;
+    }
+  }
+}
+
+@include max-width($m-q) {
+  .contact {
+    &__title {
+      margin-bottom: 6rem;
+    }
+  }
+}

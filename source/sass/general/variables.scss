@@ -1,0 +1,28 @@
+:root {
+  --ff: 'Montserrat', sans-serif;
+  --g-clr: 8, 133, 81;
+  --w-clr: 255, 255, 255;
+  --bl-clr: 0, 0, 0;
+  --h-clr: 6, 165, 99;
+  --circ-clr: 6, 178, 107;
+  --w-clr--300: 187, 187, 187;
+  --dark-clr: 27, 27, 27;
+  --form-clr: 39, 39, 39;
+  --fm-border-clr: 78, 78, 78;
+  --fm-t-clr: 103, 103, 103;
+  --bg-clr: 18, 18, 18;
+  --add-clr: 85, 85, 85;
+  --btn-hover: 226, 226, 266;
+  --btn-active: linear-gradient(90deg, #FFFFFF 0%, #06A563 100%);
+}
+
+$cont-w: 73.4375rem;
+$cont-p: 1.25rem;
+$f-16: clamp(14px, 1vw, 16px);
+$circle-shadow: 0px -20px 20px 0px rgba(0, 0, 0, 0.25) inset;
+$benefit-w: 17.0625rem;
+$benefit-icon-value: clamp(50px, 4.0625vw, 65px);
+$m-q: 40.625rem;
+$t-q: 71.875rem;
+
+

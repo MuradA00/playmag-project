@@ -1,0 +1,23 @@
+.logos {
+  margin-bottom: rem(80);
+  &__row {
+    @include df(row, center, 3.75rem);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@include max-width($m-q) {
+  .logos {
+    &__row {
+      grid-gap: rem(30);
+    }
+    &__item {
+      display: grid;
+      place-items: center;
+      img, svg, picture {
+        width: 70%;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.btn {
+  display: inline-flex;
+  text-align: left;
+  justify-content: center;
+  background-color: rgba(var(--w-clr), 1);
+  border-radius: 25px;
+  padding: rem(15) rem(24);
+  transition: 200ms ease;
+  position: relative;
+  &:hover {
+    background-color: rgba(var(--btn-hover), 1);
+  }
+  &:focus {
+    &::before {opacity: 1;}
+  }
+  &::before {
+    position: relative;
+    @include pseudo;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: var(--btn-active);
+    opacity: 0;
+    transition: inherit;
+    z-index: 5;
+    border-radius: inherit;
+  }
+  &_sm {
+    padding: rem(10) rem(15);
+  }
+  span {
+    position: relative;
+    z-index: 10;
+    text-transform: uppercase;
+    @extend .t-16-b;
+    color: rgba(var(--bl-clr), 1);
+  }
+}

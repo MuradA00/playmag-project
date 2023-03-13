@@ -1,0 +1,37 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  &__navigation {
+    @include df(row, center, clamp(2.5rem, 5vw, 5rem));
+  }
+  &__options {
+    @include df(row, center, 0.875rem);
+  }
+  &__burger {
+    display: none;
+    span {
+      display: block;
+      @include w-h(1.35rem, 1.35rem);
+      background-color: rgba(var(--w-clr), 1);
+      height: 0.125rem;
+      border-radius: 2px;
+    }
+  }
+  &__body {
+    padding: 1.4375rem 0 0;
+    @include df(row, center, 10px);
+    justify-content: space-between;
+  }
+}
+
+@include max-width(48em) {
+  .header {
+    &__burger {
+      @include df(column, center, rem(5));
+    }
+    &__logo {max-width: rem(100);}
+  }
+}

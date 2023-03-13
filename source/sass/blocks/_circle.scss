@@ -1,0 +1,30 @@
+.circle {
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  background-color: rgba(var(--circ-clr), .1);
+  position: absolute;
+  filter: blur(70px);
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  &_l {
+    max-width: rem(1181);
+    max-height: rem(1181);
+    top: 56.3125rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &_map {
+    bottom: 54.6875rem;
+    left: -8.75rem;
+    max-width: 61rem;
+    max-height: 61rem;
+  }
+}

@@ -1,0 +1,8 @@
+.menu-nav {
+  @include df(column, start, 1rem);
+  &__link {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}

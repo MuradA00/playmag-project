@@ -1,0 +1,57 @@
+.about {
+  position: relative;
+  &__wrapper {
+    background-color: rgba(var(--dark-clr), 1);
+    margin: 2.625rem 3.0625rem 0rem;
+    border-radius: 10px;
+    position: relative;
+  }
+  &__image {
+    position: absolute;
+    right: -13%;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  &__body {
+    min-height: 37.5rem;
+    padding: 6.5625rem 0;
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+  }
+  &__info {
+    max-width: rem(654);
+  }
+  &__title {
+    margin-bottom: 1.25rem;
+  }
+  &__descr {
+    @include df(column, start, 1.25rem);
+    p {
+      @extend .t-16-r;
+    }
+  }
+}
+
+@include max-width(78.125em) {
+  .about {
+    &__body {
+      padding: rem(50) 0;
+      @include df(column-reverse, center, 0);
+    }
+    &__image {
+      max-width: rem(400);
+      align-self: center;
+      position: initial;
+      transform: translate(0);
+    }
+  }
+}
+
+@include max-width($m-q) {
+  .about {
+    &__wrapper {
+      margin: 0.625rem 0.625rem 0;
+    }
+  }
+}
